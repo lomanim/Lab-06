@@ -9,7 +9,11 @@ def encode(password): # encode a string and set each digit in string + 3
     return string
 
 def decode(password):
-    pass
+    result = ''  # Initialize an empty string to store the decoded message
+    for digit in password:  # Iterate through each character in the message
+        new_digit = str((int(digit) - 3) % 10)  # Convert the character to integer, subtract 3, and take the modulo 10
+        result += new_digit  # Append the decoded digit to the result string
+    return result  # Return the decoded message
 
 def main():
     quit = False # initialize variable to check if user has quit
