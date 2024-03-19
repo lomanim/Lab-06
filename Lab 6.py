@@ -8,6 +8,7 @@ def encode(password): # encode a string and set each digit in string + 3
             string = string + str((int(i) + 3)) # add 3 to digit
     return string
 
+# Gianluca Perrella
 def decode(password):
     result = ''  # Initialize an empty string to store the decoded message
     for digit in password:  # Iterate through each character in the message
